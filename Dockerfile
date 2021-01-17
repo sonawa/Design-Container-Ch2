@@ -1,9 +1,8 @@
-FROM fabric8/java-jboss-openjdk8-jdk:1.5.1
+FROM fabric8/java-jboss-openjdk8-jdk:1.0.13
 
-ENV JAVA_APP_JAR hola-thorntail.jar
-ENV AB_ENABLED off
-ENV JAVA_OPTIONS -Xmx512m
+ENV JAVA_APP_JAR hola-swarm.jar
+ENV AB_OFF true
 
 EXPOSE 8080
 
-ADD target/hola-thorntail.jar /deployments/
+ADD target/hola-swarm.jar /app/
